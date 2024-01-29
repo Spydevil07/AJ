@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	
+	<bean id="aop_bean" class="My_Aop.student_pojo_class">
+		<property name="fee_paid" value="Yes"></property>
+		<property name="Rollnum" value="122"></property>
+		<property name="Name" value="jack"></property>
+		
+	</bean>
+	
+	<bean id="aop" class="My_Aop.Student_aspect">
+	
+	</bean>
+	
+	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+	
+	</beans>
