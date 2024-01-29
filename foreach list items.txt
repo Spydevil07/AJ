@@ -1,0 +1,34 @@
+public class ListOfListsExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<List<String>> listOfLists = new ArrayList<>();
+
+        // Adding some lists of strings to the main list
+        List<String> list1 = new ArrayList<>();
+        list1.add("Apple");
+        list1.add("Banana");
+        list1.add("Orange");
+        listOfLists.add(list1);
+
+        List<String> list2 = new ArrayList<>();
+        list2.add("Car");
+        list2.add("Bus");
+        listOfLists.add(list2);
+
+        List<String> list3 = new ArrayList<>();
+        list3.add("Dog");
+        list3.add("Cat");
+        list3.add("Bird");
+        list3.add("Fish");
+        listOfLists.add(list3);
+
+        // Printing the items of the list of lists using foreach loop
+        for (List<String> list : listOfLists) {
+            for (String item : list) {
+                System.out.println(item);
+            }
+        }
+	}
+
+}

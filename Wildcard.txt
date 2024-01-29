@@ -1,0 +1,52 @@
+public class Animal {
+	public void sound() {
+        System.out.println("Animal sound");
+    }
+}
+public class Cat extends Animal{
+	public void sound() {
+        System.out.println("Cat meowing");
+    }
+}
+public class Dog extends Animal{
+	@Override
+    public void sound() {
+        System.out.println("Dog barking");
+    }
+}
+public class WildcardsExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Animal> animals = new ArrayList<>();
+        animals.add(new Dog());
+        animals.add(new Cat());
+
+        // Pass List of animals to printSounds method
+        printSounds(animals);
+
+        // List of dogs
+        List<Dog> dogs = new ArrayList<>();
+        dogs.add(new Dog());
+        dogs.add(new Dog());
+
+        // Pass List of dogs to printSounds method
+        printSounds(dogs);
+
+        // List of cats
+        List<Cat> cats = new ArrayList<>();
+        cats.add(new Cat());
+        cats.add(new Cat());
+
+        // Pass List of cats to printSounds method
+        printSounds(cats);
+    }
+
+    // Method to print sounds of animals using wildcard
+    public static void printSounds(List<? extends Animal> animals) {
+        for (Animal animal : animals) {
+            animal.sound();
+        }
+	}
+
+}

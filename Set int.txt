@@ -1,0 +1,42 @@
+public class SetOperationsExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Creating sets
+        Set<String> set1 = new HashSet<>();
+        Set<String> set2 = new HashSet<>();
+
+        // Adding items to set1
+        set1.add("Apple");
+        set1.add("Banana");
+        set1.add("Orange");
+
+        // Adding items to set2
+        set2.add("Banana");
+        set2.add("Grapes");
+        set2.add("Watermelon");
+
+        // Printing set1
+        System.out.println("Set 1: " + set1);
+
+        // Printing set2
+        System.out.println("Set 2: " + set2);
+
+        // Inserting items of set2 into set1
+        set1.addAll(set2);
+        System.out.println("After inserting set2 into set1: " + set1);
+
+        // Removing items from set1
+        set1.remove("Orange");
+        System.out.println("After removing 'Orange' from set1: " + set1);
+
+        // Searching for an item in set1
+        String searchItem = "Banana";
+        if (set1.contains(searchItem)) {
+            System.out.println(searchItem + " found in set1.");
+        } else {
+            System.out.println(searchItem + " not found in set1.");
+        }
+	}
+
+}

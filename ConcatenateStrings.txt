@@ -1,0 +1,21 @@
+public class ConcatenateStrings {
+	interface StringConcatenator {
+	    String concatenate(String str1, String str2);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Lambda expression for concatenating two strings
+        StringConcatenator concatenator = (str1, str2) -> str1 + str2;
+
+        // Strings to concatenate
+        String string1 = "Hello, ";
+        String string2 = "world!";
+
+        // Concatenate strings using lambda expression
+        String result = concatenator.concatenate(string1, string2);
+
+        // Print the concatenated string
+        System.out.println("Concatenated String: " + result);
+	}
+
+}

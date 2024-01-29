@@ -1,0 +1,54 @@
+public class MapOperationsExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 // Creating a map
+        Map<String, Integer> map1 = new HashMap<>();
+        Map<String, Integer> map2 = new HashMap<>();
+
+        // Adding items to map1
+        map1.put("Apple", 10);
+        map1.put("Banana", 20);
+        map1.put("Orange", 15);
+
+        // Printing all keys and values of map1
+        System.out.println("Map 1:");
+        printMap(map1);
+
+        // Removing item from map1
+        String keyToRemove = "Banana";
+        map1.remove(keyToRemove);
+        System.out.println("After removing '" + keyToRemove + "' from map1:");
+        printMap(map1);
+
+        // Searching for a specific key in map1
+        String searchKey = "Orange";
+        if (map1.containsKey(searchKey)) {
+            System.out.println("Key '" + searchKey + "' found in map1.");
+        } else {
+            System.out.println("Key '" + searchKey + "' not found in map1.");
+        }
+
+        // Getting value of the specified key from map1
+        String specifiedKey = "Apple";
+        Integer value = map1.get(specifiedKey);
+        if (value != null) {
+            System.out.println("Value of key '" + specifiedKey + "' in map1: " + value);
+        } else {
+            System.out.println("Key '" + specifiedKey + "' not found in map1.");
+        }
+
+        // Adding all elements of map1 into map2
+        map2.putAll(map1);
+        System.out.println("After inserting map1 elements into map2:");
+        printMap(map2);
+    }
+
+    // Method to print all keys and values of a map
+    private static void printMap(Map<String, Integer> map) {
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+	}
+
+}

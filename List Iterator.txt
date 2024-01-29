@@ -1,0 +1,28 @@
+public class ListIteratorDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<String> al = new ArrayList<>();
+        al.add("c");
+        al.add("b");
+        al.add("s");
+        al.add("t");
+        al.add("q");
+        al.add("r");
+
+        System.out.println("Contents of al: ");
+        ListIterator<String> litr = al.listIterator();
+
+        // Iterate through the list and print elements
+        while (litr.hasNext()) {
+            System.out.print(litr.next() + " ");
+        }
+
+        System.out.println("\nIterating in reverse:");
+        // Iterate in reverse order
+        while (litr.hasPrevious()) {
+            System.out.print(litr.previous() + " ");
+	}
+  }
+
+}
