@@ -20,7 +20,7 @@ public class Dog extends Animal{
     }
 }
 
-WildcardsExample.java
+// WildcardsExample.java
 public class WildcardsExample {
 
 	public static void main(String[] args) {
